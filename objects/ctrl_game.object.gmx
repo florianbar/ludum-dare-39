@@ -50,10 +50,10 @@ global.game_speed = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(obj_player))
-{
-    draw_text(10,10,string(health));
-}
+            <string>draw_set_colour(c_white);
+draw_set_font(fnt_pixel);
+draw_set_halign(fa_center);
+draw_text(room_width/2,10,'WAVE 1');
 </string>
           </argument>
         </arguments>

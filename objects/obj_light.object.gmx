@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,23 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Init
+            <string>///step
 
-offset_x = 1;
-offset_y = 1;
-shake_speed = room_speed * 0.05; 
-
-//Start shake
-alarm[0] = 1;
-
-//Destroy shake
-alarm[1] = room_speed * 0.5;
+radius = obj_player.health * 2;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -58,60 +50,11 @@ alarm[1] = room_speed * 0.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy
-
-//reset position
-view_xview[0] = 0; 
-view_yview[0] = 0;
-
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Shake
-
-amount_x = choose(-offset_x, offset_x);
-amount_y = choose(-offset_y, offset_y);
-     
-view_xview[0] += amount_x;
-view_yview[0] += amount_y;   
-
-alarm[0] = shake_speed;
+            <string>///Draw
+draw_set_colour(c_yellow);
+draw_set_alpha(0.2);
+draw_circle(obj_player.x,obj_player.y,radius,false);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

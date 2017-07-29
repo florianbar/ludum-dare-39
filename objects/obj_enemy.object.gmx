@@ -29,11 +29,16 @@
 
 hsp = 0;
 vsp = 0;
-hdir = 0; //will be declared in emitter
+hdir = choose(-1,1); //will be declared in emitter
 move_speed = 2;
+jump_speed = 7;
 grav = 0.25;
+image_speed = 0.1;
 
 can_move = false;
+
+//State: normal, jump, dead
+state = 'normal';
 </string>
           </argument>
         </arguments>
@@ -58,6 +63,8 @@ can_move = false;
             <kind>1</kind>
             <string>///step
 
+image_speed = 0.1 * global.game_speed;
+
 /*
  * Moving
  */
@@ -69,10 +76,20 @@ if (can_move)
 image_xscale = hdir;
 
 
+if (state == 'jump')
+{
+    state = 'normal';
+    
+    audio_play_sound(snd_jump, 5, false);
+    vsp = -jump_speed;
+}
+
+
 /*
  * Gravity
  */
-vsp += grav * global.game_speed;
+vsp += grav;
+vsp *= global.game_speed;
 
 
 /*
@@ -107,6 +124,62 @@ if (!place_free(x,y+vsp))
 }
 
 y += vsp;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy_jump_right">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Decide to jump or not
+
+if (state != 'jump' and hdir == 1)
+{
+    state = 'jump';
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy_jump_left">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Decide to jump or not
+
+if (state != 'jump' and hdir == -1)
+{
+    state = 'jump';
+}
 </string>
           </argument>
         </arguments>
