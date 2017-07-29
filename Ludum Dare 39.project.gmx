@@ -12,6 +12,8 @@
     <sound>sound\snd_shoot_enemy</sound>
     <sound>sound\snd_button</sound>
     <sound>sound\snd_menu_scroll</sound>
+    <sound>sound\snd_cage_explosion</sound>
+    <sound>sound\snd_pick_up</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -19,12 +21,13 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_solid</sprite>
     <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\spr_enemy_jump_left</sprite>
-    <sprite>sprites\spr_enemy_jump_right</sprite>
-    <sprite>sprites\sprite7</sprite>
     <sprite>sprites\spr_play_button</sprite>
     <sprite>sprites\spr_menu_options</sprite>
     <sprite>sprites\spr_tutorial_slides</sprite>
+    <sprite>sprites\spr_enemy_destroy</sprite>
+    <sprite>sprites\spr_cage</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_door</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_dungeon</background>
@@ -57,11 +60,13 @@
     <object>objects\obj_shake_screen</object>
     <object>objects\obj_shake_screen_quick</object>
     <object>objects\obj_bullet</object>
-    <object>objects\obj_enemy_jump_left</object>
-    <object>objects\obj_enemy_jump_right</object>
     <object>objects\obj_light</object>
     <object>objects\obj_menu_options</object>
     <object>objects\obj_tutorial</object>
+    <object>objects\obj_enemy_destroy</object>
+    <object>objects\obj_cage</object>
+    <object>objects\obj_key</object>
+    <object>objects\obj_door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>

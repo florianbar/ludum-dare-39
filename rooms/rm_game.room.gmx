@@ -3,8 +3,8 @@
   <caption></caption>
   <width>480</width>
   <height>270</height>
-  <vsnap>2</vsnap>
-  <hsnap>2</hsnap>
+  <vsnap>1</vsnap>
+  <hsnap>1</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="ctrl_game" x="0" y="0" name="inst_BCDD37FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="240" y="208" name="inst_EF3E2FE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="166" y="218" name="inst_EF3E2FE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_emitter" x="64" y="40" name="inst_D32BAF9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_emitter" x="400" y="40" name="inst_7DB27FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="20" y="0" name="inst_C18BDC81" locked="0" code="" scaleX="1" scaleY="17" colour="4294967295" rotation="0"/>
@@ -64,6 +64,11 @@
     <instance objName="obj_solid" x="36" y="174" name="inst_177F6917" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="150" y="118" name="inst_28838AEE" locked="0" code="" scaleX="11.1300001144409" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="36" y="-6" name="inst_57806F67" locked="0" code="" scaleX="25.5" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_destroy" x="36" y="220" name="inst_975F39D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_destroy" x="412" y="220" name="inst_EAD3CCEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key" x="224" y="65" name="inst_0364C970" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cage" x="220" y="-1" name="inst_EC87B1B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="238" y="190" name="inst_CA094BA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
