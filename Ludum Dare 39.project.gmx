@@ -4,18 +4,27 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_shoot</sound>
+    <sound>sound\snd_shoot_wall</sound>
+    <sound>sound\snd_recharge</sound>
+    <sound>sound\snd_shoot_enemy</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_walll</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_enemy_exit</sprite>
+    <sprite>sprites\spr_enemy_entrance</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_seconds.gml</script>
     <script>scripts\scr_shake_start.gml</script>
+    <script>scripts\scr_shake_quick.gml</script>
     <script>scripts\scr_shake_end.gml</script>
   </scripts>
   <objects name="objects">
@@ -29,7 +38,10 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_walll</object>
     <object>objects\obj_shake_screen</object>
+    <object>objects\obj_shake_screen_quick</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_enemy_exit</object>
+    <object>objects\obj_enemy_entrance</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>

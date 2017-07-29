@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>///Spawn enemy
-var enemy = instance_create(room_width/2,-32,obj_enemy);
+var enemy = instance_create(x,y,obj_enemy);
 enemy.hdir = choose(-1,1);
 alarm[0] = room_speed * 1;
 </string>
