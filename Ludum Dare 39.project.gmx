@@ -14,6 +14,8 @@
     <sound>sound\snd_menu_scroll</sound>
     <sound>sound\snd_cage_explosion</sound>
     <sound>sound\snd_pick_up</sound>
+    <sound>sound\snd_door_open</sound>
+    <sound>sound\snd_door_light</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -61,6 +63,7 @@
     <object>objects\obj_shake_screen_quick</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_light</object>
+    <object>objects\obj_end_light</object>
     <object>objects\obj_menu_options</object>
     <object>objects\obj_tutorial</object>
     <object>objects\obj_enemy_destroy</object>

@@ -34,6 +34,7 @@ jump_speed = 7;
 grav = 0.25;
 
 can_shoot = true;
+is_active = true;
 
 health = 0;
 is_charging = false;
@@ -41,7 +42,7 @@ is_charging = false;
 instance_create(x,y,obj_light);
 
 
-//States: normal, charging, dying
+//States: normal, charging, dying, exiting
 state = 'normal';
 </string>
           </argument>
@@ -127,6 +128,8 @@ if (state == 'charging')
           <argument>
             <kind>1</kind>
             <string>///step
+
+if (!is_active) exit;
 
 //check user input
 key_right  =  keyboard_check(ord('D'));

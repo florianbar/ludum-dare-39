@@ -42,8 +42,9 @@ if (x &lt; room_width/2) {
 
 can_move = false;
 
-//State: normal, jump, dead
+//State: normal, jump, dead, burning
 state = 'normal';
+
 </string>
           </argument>
         </arguments>
@@ -68,67 +69,71 @@ state = 'normal';
             <kind>1</kind>
             <string>///step
 
-image_speed = 0.1 * global.game_speed;
-
-/*
- * Moving
- */
-if (can_move) 
+if (state == 'normal')
 {
-    hsp = hdir * move_speed * global.game_speed;
-}
-
-image_xscale = hdir;
-
-
-if (state == 'jump')
-{
-    state = 'normal';
+    image_speed = 0.1 * global.game_speed;
     
-    audio_play_sound(snd_jump, 5, false);
-    vsp = -jump_speed;
-}
-
-
-/*
- * Gravity
- */
-vsp += grav;
-vsp *= global.game_speed;
-
-
-/*
- * Horizontal collision
- */
-if (!place_free(x+hsp,y)) 
-{
-    while (place_free(x+sign(hsp),y)) 
+    /*
+     * Moving
+     */
+    if (can_move) 
     {
-        x += sign(hsp);
+        hsp = hdir * move_speed * global.game_speed;
     }
-    hsp = 0;
     
-    //Change direction
-    hdir = -hdir;
-}
-
-x += hsp;
-
-
-/*
- * Vertical collision
- */
-if (!place_free(x,y+vsp)) 
-{
-    while (place_free(x,y+sign(vsp))) 
+    image_xscale = hdir;
+    
+    /*
+     * Gravity
+     */
+    vsp += grav;
+    vsp *= global.game_speed;
+    
+    
+    
+    /*
+     * Horizontal collision
+     */
+    if (!place_free(x+hsp,y)) 
     {
-        y += sign(vsp);
+        while (place_free(x+sign(hsp),y)) 
+        {
+            x += sign(hsp);
+        }
+        hsp = 0;
+        
+        //Change direction
+        hdir = -hdir;
     }
-    vsp = 0;
-    can_move = true;
+    
+    x += hsp;
+    
+    
+    /*
+     * Vertical collision
+     */
+    if (!place_free(x,y+vsp)) 
+    {
+        while (place_free(x,y+sign(vsp))) 
+        {
+            y += sign(vsp);
+        }
+        vsp = 0;
+        can_move = true;
+    }
+    
+    y += vsp;
 }
-
-y += vsp;
+else if (state == 'burning')
+{
+    image_speed = 0;
+    image_alpha -= 0.01;
+    
+    if (image_alpha &lt;= 0)
+    {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

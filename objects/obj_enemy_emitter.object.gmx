@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0] = room_speed * 1;
+is_active = true;
 </string>
           </argument>
         </arguments>
@@ -48,9 +49,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn enemy
-var enemy = instance_create(x,y,obj_enemy);
-alarm[0] = room_speed * random_range(1,2);
+            <string>if is_active
+{
+    ///Spawn enemy
+    var enemy = instance_create(x,y,obj_enemy);
+    alarm[0] = room_speed * random_range(1,2);
+}
 </string>
           </argument>
         </arguments>
