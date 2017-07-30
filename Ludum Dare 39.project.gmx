@@ -16,10 +16,12 @@
     <sound>sound\snd_pick_up</sound>
     <sound>sound\snd_door_open</sound>
     <sound>sound\snd_door_light</sound>
+    <sound>sound\snd_enemy_bite</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_player_charging</sprite>
+    <sprite>sprites\spr_player_dead</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_solid</sprite>
     <sprite>sprites\spr_bullet</sprite>
@@ -35,6 +37,7 @@
     <background>background\bck_dungeon</background>
     <background>background\bck_title</background>
     <background>background\bck_tutorial</background>
+    <background>background\bck_end</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -45,13 +48,19 @@
     <scripts name="player">
       <script>scripts\scr_player_state_normal.gml</script>
     </scripts>
+    <script>scripts\scr_game_pause.gml</script>
+    <script>scripts\scr_data_create.gml</script>
+    <script>scripts\scr_data_get.gml</script>
+    <script>scripts\scr_data_update.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_pixel</font>
   </fonts>
   <objects name="objects">
     <objects name="Controllers">
+      <object>objects\ctrl_init</object>
       <object>objects\ctrl_title</object>
+      <object>objects\ctrl_end</object>
       <object>objects\ctrl_game</object>
       <object>objects\ctrl_gameOver</object>
       <object>objects\obj_enemy_emitter</object>
@@ -70,12 +79,15 @@
     <object>objects\obj_cage</object>
     <object>objects\obj_key</object>
     <object>objects\obj_door</object>
+    <object>objects\ctrl_pause</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_init</room>
     <room>rooms\rm_title</room>
     <room>rooms\rm_tutorial</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_gameOver</room>
+    <room>rooms\rm_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

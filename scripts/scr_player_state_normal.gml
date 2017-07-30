@@ -1,3 +1,8 @@
+//moving direction
+var hdir = key_right + key_left;
+hsp = hdir * move_speed;
+if (hdir != 0) image_xscale = hdir;
+
 sprite_index = spr_player;
 
 /*
