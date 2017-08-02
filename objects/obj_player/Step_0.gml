@@ -5,8 +5,8 @@ if (!is_active) exit;
 //check user input
 key_right  =  keyboard_check(ord("D"));
 key_left   = -keyboard_check(ord("A"));
-key_jump   =  keyboard_check_pressed(ord("K"));
-key_shoot  =  keyboard_check(ord("J"));
+key_jump   =  keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space);
+key_shoot  =  keyboard_check(ord("K"));
 key_charge = keyboard_check(ord("L"));
 key_charge_released = keyboard_check_released(ord("L"));
 
