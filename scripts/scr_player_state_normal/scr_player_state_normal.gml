@@ -5,15 +5,6 @@ if (hdir != 0) image_xscale = hdir;
 
 sprite_index = spr_player;
 
-/*
- * Jump
- */
-if (key_jump and !place_free(x,y+1))
-{
-    audio_play_sound(snd_jump, 5, false);
-    vsp = -jump_speed;
-}
-
 
 /*
  * Gravity

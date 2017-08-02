@@ -8,7 +8,17 @@ key_left   = -keyboard_check(ord("A"));
 key_jump   =  keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_space);
 key_shoot  =  keyboard_check(ord("K"));
 key_charge = keyboard_check(ord("L"));
-key_charge_released = keyboard_check_released(ord("L")); 
+key_charge_released = keyboard_check_released(ord("L"));
+
+
+/*
+ * Jump
+ */
+if (key_jump and !place_free(x,y+1))
+{
+    audio_play_sound(snd_jump, 5, false);
+    vsp = -jump_speed;
+}
 
 
 /*
@@ -24,7 +34,7 @@ if (key_charge and !place_free(x,y+1) and state != "charging")
     audio_play_sound(snd_recharge, 5, false);
     scr_shake_start();
 }
-if (key_charge_released) 
+if (key_charge_released or place_free(x,y+1)) 
 {
     state = "normal";
     global.game_speed = 1;
