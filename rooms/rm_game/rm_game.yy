@@ -290,7 +290,7 @@
                     "name_with_no_file_rename": "inst_7D447A68",
                     "objId": "bf99ea52-3f94-4cbb-af40-6971af0c25da",
                     "rotation": 0,
-                    "scaleX": 7,
+                    "scaleX": 5,
                     "scaleY": 1
                 },
                 {
@@ -302,7 +302,7 @@
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
                     "name": "inst_C14D251A",
-                    "x": 332,
+                    "x": 364,
                     "y": 62,
                     "IsDnD": false,
                     "colour": {
@@ -314,7 +314,7 @@
                     "name_with_no_file_rename": "inst_C14D251A",
                     "objId": "bf99ea52-3f94-4cbb-af40-6971af0c25da",
                     "rotation": 0,
-                    "scaleX": 7,
+                    "scaleX": 5,
                     "scaleY": 1
                 },
                 {
@@ -326,7 +326,7 @@
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
                     "name": "inst_37B4E451",
-                    "x": 332,
+                    "x": 364,
                     "y": 172,
                     "IsDnD": false,
                     "colour": {
@@ -338,7 +338,7 @@
                     "name_with_no_file_rename": "inst_37B4E451",
                     "objId": "bf99ea52-3f94-4cbb-af40-6971af0c25da",
                     "rotation": 0,
-                    "scaleX": 7,
+                    "scaleX": 5,
                     "scaleY": 1
                 },
                 {
@@ -362,7 +362,7 @@
                     "name_with_no_file_rename": "inst_177F6917",
                     "objId": "bf99ea52-3f94-4cbb-af40-6971af0c25da",
                     "rotation": 0,
-                    "scaleX": 7,
+                    "scaleX": 5,
                     "scaleY": 1
                 },
                 {
@@ -374,7 +374,7 @@
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
                     "name": "inst_28838AEE",
-                    "x": 150,
+                    "x": 136,
                     "y": 118,
                     "IsDnD": false,
                     "colour": {
@@ -386,7 +386,7 @@
                     "name_with_no_file_rename": "inst_28838AEE",
                     "objId": "bf99ea52-3f94-4cbb-af40-6971af0c25da",
                     "rotation": 0,
-                    "scaleX": 11.13,
+                    "scaleX": 13.0675,
                     "scaleY": 1
                 },
                 {
