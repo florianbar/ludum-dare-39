@@ -3,7 +3,6 @@
 hsp = 0;
 vsp = 0;
 move_speed = 2;
-jump_speed = 7;
 grav = 0.25;
 image_speed = 0.1;
 

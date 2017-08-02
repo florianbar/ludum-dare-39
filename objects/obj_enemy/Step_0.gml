@@ -9,7 +9,7 @@ if (state == "normal")
      */
     if (can_move) 
     {
-        hsp = hdir * move_speed * global.game_speed;
+        hsp = (hdir * move_speed) * global.game_speed;
     }
     
     image_xscale = hdir;
@@ -17,10 +17,7 @@ if (state == "normal")
     /*
      * Gravity
      */
-    vsp *= global.game_speed;
-    vsp += grav;
-    
-    
+    vsp += (grav * global.game_speed);
     
     /*
      * Horizontal collision
