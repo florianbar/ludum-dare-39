@@ -7,11 +7,11 @@ if (!is_active) exit;
  * User input
  */
  
-var key_up      = -(keyboard_check_released(vk_up) || keyboard_check_released(ord("W")));
-var key_down    = keyboard_check_released(vk_down) || keyboard_check_released(ord("S"));
+var key_up      = keyboard_check_released(vk_up) or keyboard_check_released(ord("W"));
+var key_down    = keyboard_check_released(vk_down) or keyboard_check_released(ord("S"));
 
 //Action key: enter or pace
-var key_action  = keyboard_check_released(vk_enter) || keyboard_check_released(vk_space);
+var key_action  = keyboard_check_released(vk_enter) or keyboard_check_released(vk_space);
 
 
 
